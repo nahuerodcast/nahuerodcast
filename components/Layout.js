@@ -82,6 +82,7 @@ export const Layout = ({ children }) => {
         <Navbar.Content>
           <Switch
             checked={darkMode.value}
+            shadow
             iconOn={<SunIcon filled />}
             iconOff={<MoonIcon filled />}
             onChange={() => darkMode.toggle()}
@@ -93,7 +94,6 @@ export const Layout = ({ children }) => {
                   <div
                     style={{
                       cursor: "pointer",
-                      // filter: !locale.includes(loc) && `grayscale(1)`
                     }}
                   >
                     <Flag code={loc === "es" ? "arg" : "usa"} height="16" />

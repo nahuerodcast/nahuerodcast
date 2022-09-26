@@ -1,8 +1,9 @@
 {
-  "page.home.head.title": "English",
   "global.config.flag": "usa",
   "navbar.about-me": "About me",
   "navbar.projects": "Projects",
   "navbar.experience": "Experience",
-  "navbar.contact": "Contact"
+  "navbar.contact": "Contact",
+  "page.home.title": "Front-end developer",
+  "page.home.description": "A Front-end developer who loves finance. I'm a really curious, creative and passionate person. I love what i do."
 }
