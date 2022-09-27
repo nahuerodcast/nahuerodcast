@@ -22,6 +22,14 @@ export const ExperienceContent = () => {
     id: "page.experience.company.bekeu.desc"
   });
 
+  const coderTitle = intl.formatMessage({
+    id: "page.experience.company.coderhouse.title"
+  });
+
+  const coderDesc = intl.formatMessage({
+    id: "page.experience.company.coderhouse.title"
+  });
+
   const arr = [
     {
       id: 1,
@@ -36,11 +44,9 @@ export const ExperienceContent = () => {
       id: 2,
       name: "Coderhouse",
       image: "https://jobs.coderhouse.com/assets/logos_coderhouse.png",
-      title: "Tutor de desarrollo web",
-      tech:
-        "Tecnologías utilizadas: HTML, CSS, Bootstrap, Grids, SASS, Git, Github.",
-      desc:
-        "Seguimiento de 80 alumnos, corrección de desafíos y pre-entregas, asistencia de clases en vivo"
+      title: coderTitle,
+      tech: "HTML, CSS, Bootstrap, Grids, SASS, Git, Github.",
+      desc: coderDesc
     },
     {
       id: 3,
@@ -159,7 +165,7 @@ export const ExperienceContent = () => {
                         color: "$gray800"
                       }}
                     >
-                      {item.tech}
+                      {item.tech && `Stack: ${item.tech}`}
                     </Text>
                     <Text
                       h5
