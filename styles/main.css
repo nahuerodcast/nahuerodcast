@@ -1,0 +1,23 @@
+/* * {
+  background: linear-gradient(-45deg, #000000, #192734, #15202b, #22303c);
+  background-size: 400% 400%;
+  animation: gradient 30s ease infinite;
+}
+
+.light {
+  background: linear-gradient(-45deg, #000000, #192734, #15202b, #22303c);
+  background-size: 400% 400%;
+  animation: gradient 30s ease infinite;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+} */

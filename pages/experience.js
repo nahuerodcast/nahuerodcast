@@ -1,10 +1,10 @@
 import { Layout } from "../components/Layout";
-import { HomeContent } from "../components/HomeContent";
+import { ExperienceContent } from "../components/Content/ExperienceContent";
 
 export default function Experience() {
   return (
     <Layout>
-      <HomeContent />
+      <ExperienceContent />
     </Layout>
   );
 }

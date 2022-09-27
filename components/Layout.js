@@ -5,7 +5,7 @@ import {
   Text,
   Avatar,
   useTheme,
-  Switch,
+  Switch
 } from "@nextui-org/react";
 import useDarkMode from "use-dark-mode";
 import { useIntl } from "react-intl";
@@ -28,7 +28,7 @@ export const Layout = ({ children }) => {
 
   const { locale, locales, asPath } = useRouter();
 
-  console.log("this is locale", locale);
+  console.log("this is locale", asPath);
 
   const handleScrollTo = () => {
     window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
@@ -37,7 +37,7 @@ export const Layout = ({ children }) => {
   return (
     <Box
       css={{
-        maxW: "100%",
+        maxW: "100%"
       }}
     >
       <Navbar variant="sticky" maxWidth={"lg"}>
@@ -55,13 +55,8 @@ export const Layout = ({ children }) => {
           </NextLink>
         </Navbar.Brand>
         <Navbar.Content hideIn="xs" variant="highlight-rounded">
-          <NextLink href={`/about-me`} locale={locale}>
-            <Navbar.Link
-              isActive={asPath.includes("about-me")}
-              onClick={handleScrollTo}
-            >
-              {aboutMe}
-            </Navbar.Link>
+          <NextLink href={`/`} locale={locale}>
+            <Navbar.Link isActive={asPath === "/"}>{aboutMe}</Navbar.Link>
           </NextLink>
           <NextLink href={`/projects`} locale={locale}>
             <Navbar.Link isActive={asPath.includes("projects")}>
@@ -93,7 +88,7 @@ export const Layout = ({ children }) => {
                 <NextLink key={id} href={asPath} locale={loc}>
                   <div
                     style={{
-                      cursor: "pointer",
+                      cursor: "pointer"
                     }}
                   >
                     <Flag code={loc === "es" ? "arg" : "usa"} height="16" />
@@ -103,7 +98,7 @@ export const Layout = ({ children }) => {
           )}
         </Navbar.Content>
       </Navbar>
-      {children}
+      <div>{children}</div>
     </Box>
   );
 };

@@ -6,5 +6,9 @@
   "navbar.contact": "Contact",
   "page.home.title": "Front-end developer",
   "page.home.description": "A Front-end developer who loves finance. I'm a really curious, creative and passionate person. I love what i do.",
-  "page.home.show-more": "Show more"
+  "page.home.show-more": "Show more",
+  "page.experience.title": "Experience",
+  "page.experience.current": "Current",
+  "page.experience.company.bekeu.title": "Front-end developer",
+  "page.experience.company.bekeu.desc": "Creating awesome B2B Marketplace for LATAM. Main Front-end developer for logged marketplace."
 }

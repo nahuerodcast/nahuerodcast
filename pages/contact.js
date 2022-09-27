@@ -1,10 +1,10 @@
 import { Layout } from "../components/Layout";
-import { HomeContent } from "../components/HomeContent";
+import { ContactContent } from "../components/Content/ContactContent";
 
 export default function Contact() {
   return (
     <Layout>
-      <HomeContent />
+      <ContactContent />
     </Layout>
   );
 }
