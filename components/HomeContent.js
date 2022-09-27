@@ -1,20 +1,26 @@
-import { Text, Spacer, Container, Card } from "@nextui-org/react";
+import {
+  Text,
+  Spacer,
+  Container,
+  Card,
+  Button,
+  useTheme,
+} from "@nextui-org/react";
 import { useIntl } from "react-intl";
-import { Box } from "./Box.js";
-import Image from "next/image";
-import imgSource from "../public/media/profile-pic.jpg";
 
 export const HomeContent = () => {
   const intl = useIntl();
-
   const title = intl.formatMessage({ id: "page.home.title" });
   const desc = intl.formatMessage({ id: "page.home.description" });
+  const showMore = intl.formatMessage({ id: "page.home.show-more" });
+  const { type, isDark } = useTheme();
 
   return (
-    <Container lg css={{ marginTop: "$2xl" }}>
+    <Container lg css={{ marginTop: "$3xl", padding: 0 }}>
       <div
         style={{
           display: "flex",
+          alignItems: "center",
           flexDirection: "row",
           maxWidth: "$lg",
         }}
@@ -24,7 +30,6 @@ export const HomeContent = () => {
             h1
             css={{
               textGradient: "45deg, $blue600 -20%, $pink600 50%",
-              marginTop: "56px",
               paddingBottom: 0,
               marginBottom: 0,
               fontSize: "$7xl",
@@ -35,7 +40,6 @@ export const HomeContent = () => {
           <Text
             h3
             css={{
-              // textGradient: "45deg, $cyan400 -20%, $blue600 50%",
               paddingTop: 0,
               marginTop: "-10px",
             }}
@@ -50,6 +54,17 @@ export const HomeContent = () => {
           >
             {desc}
           </Text>
+          <Button
+            shadow
+            css={{
+              backgroundColor: "$accents9",
+              normalShadow: "$accents4",
+              marginTop: "24px",
+              color: "$accents0",
+            }}
+          >
+            {showMore}
+          </Button>
           <Spacer y={1} />
         </Container>
         <Card
@@ -66,7 +81,7 @@ export const HomeContent = () => {
             objectFit="cover"
             width="100%"
             height={500}
-            alt="Card image background"
+            alt="Nahue Rodcast"
           />
         </Card>
       </div>
