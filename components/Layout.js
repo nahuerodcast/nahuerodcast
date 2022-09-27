@@ -2,11 +2,10 @@ import { Box } from "./Box.js";
 import {
   Navbar,
   Button,
-  Link,
   Text,
   Avatar,
   useTheme,
-  Switch
+  Switch,
 } from "@nextui-org/react";
 import useDarkMode from "use-dark-mode";
 import { useIntl } from "react-intl";
@@ -15,6 +14,7 @@ import { useState } from "react";
 import { useRouter } from "next/router";
 import { MoonIcon } from "../components/MoonIcon";
 import { SunIcon } from "../components/SunIcon";
+import NextLink from "next/link";
 
 export const Layout = ({ children }) => {
   const [flag, setFlag] = useState(false);
@@ -28,12 +28,16 @@ export const Layout = ({ children }) => {
 
   const { locale, locales, asPath } = useRouter();
 
-  console.log(locales);
+  console.log("this is locale", locale);
+
+  const handleScrollTo = () => {
+    window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+  };
 
   return (
     <Box
       css={{
-        maxW: "100%"
+        maxW: "100%",
       }}
     >
       <Navbar variant="sticky" maxWidth={"lg"}>
@@ -43,28 +47,60 @@ export const Layout = ({ children }) => {
             src="https://portfolio-nahue-rodcast.vercel.app/profile-pic.jpg"
             size="sm"
           />
-          <Text css={{ marginRight: "4px" }}> Nahue Rodcast </Text>
+          <NextLink href="/" locale={locale}>
+            <Text css={{ marginRight: "4px", cursor: "pointer" }}>
+              {" "}
+              Nahue Rodcast{" "}
+            </Text>
+          </NextLink>
         </Navbar.Brand>
-        <Navbar.Content hideIn="xs" variant="highlight">
-          <Navbar.Link isActive href="#">
-            {aboutMe}
-          </Navbar.Link>
-          <Navbar.Link href={`${locale}/projects`}>{projects}</Navbar.Link>
-          <Navbar.Link href={`${locale}/experience`}>{experience}</Navbar.Link>
-          <Navbar.Link href={`${locale}/contact`}>{contact}</Navbar.Link>
+        <Navbar.Content hideIn="xs" variant="highlight-rounded">
+          <NextLink href={`/about-me`} locale={locale}>
+            <Navbar.Link
+              isActive={asPath.includes("about-me")}
+              onClick={handleScrollTo}
+            >
+              {aboutMe}
+            </Navbar.Link>
+          </NextLink>
+          <NextLink href={`/projects`} locale={locale}>
+            <Navbar.Link isActive={asPath.includes("projects")}>
+              {projects}
+            </Navbar.Link>
+          </NextLink>
+          <NextLink href={`/experience`} locale={locale}>
+            <Navbar.Link isActive={asPath.includes("experience")}>
+              {experience}
+            </Navbar.Link>
+          </NextLink>
+          <NextLink href={`/contact`} locale={locale}>
+            <Navbar.Link isActive={asPath.includes("contact")}>
+              {contact}
+            </Navbar.Link>
+          </NextLink>
         </Navbar.Content>
         <Navbar.Content>
           <Switch
             checked={darkMode.value}
+            shadow
             iconOn={<SunIcon filled />}
             iconOff={<MoonIcon filled />}
             onChange={() => darkMode.toggle()}
           />
-          {[...locales].sort().map((asd) => (
-            <Link key={asd} href={`/${asd}${asPath}`} locale={locale}>
-              <Flag code={asd === "es" ? "arg" : "usa"} height="16" />
-            </Link>
-          ))}
+          {[...locales].sort().map(
+            (loc, id) =>
+              !locale.includes(loc) && (
+                <NextLink key={id} href={asPath} locale={loc}>
+                  <div
+                    style={{
+                      cursor: "pointer",
+                    }}
+                  >
+                    <Flag code={loc === "es" ? "arg" : "usa"} height="16" />
+                  </div>
+                </NextLink>
+              )
+          )}
         </Navbar.Content>
       </Navbar>
       {children}
