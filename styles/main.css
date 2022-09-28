@@ -3,11 +3,17 @@
   background-size: 400% 400%;
   animation: gradient 30s ease infinite;
 }
+*/
 
-.light {
-  background: linear-gradient(-45deg, #000000, #192734, #15202b, #22303c);
-  background-size: 400% 400%;
-  animation: gradient 30s ease infinite;
+.mainAnimation {
+  background: radial-gradient(
+    circle,
+    rgba(80, 9, 121, 0.3),
+    rgba(0, 0, 0, 0) 70%
+  );
+  background-size: 150% 150%;
+  animation: gradient 20s ease infinite;
+  backdrop-filter: blur(80%);
 }
 
 @keyframes gradient {
@@ -20,4 +26,4 @@
   100% {
     background-position: 0% 50%;
   }
-} */
+}

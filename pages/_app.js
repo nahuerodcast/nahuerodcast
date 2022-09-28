@@ -6,27 +6,41 @@ import es from "../lang/es.json";
 import en from "../lang/en.json";
 import "animate.css";
 import "../styles/main.css";
+import CustomCursor from "custom-cursor-react";
+import "custom-cursor-react/dist/index.css";
 
 function MyApp({ Component, pageProps }) {
   const lightTheme = createTheme({
     type: "light",
-    theme: {}
+    theme: {},
   });
 
   const darkTheme = createTheme({
     type: "dark",
-    theme: { colors: { darky: "#FFFFFF" } }
+    theme: { colors: { darky: "#FFFFFF" } },
   });
   const darkMode = useDarkMode(false);
   const { locale } = useRouter();
   const messages = {
     es,
-    en
+    en,
   };
 
   return (
     <IntlProvider locale={locale} messages={messages[locale]}>
       <NextUIProvider theme={darkMode.value ? darkTheme : lightTheme}>
+        <CustomCursor
+          targets={[".link", "button"]}
+          customClass="*"
+          dimensions={30}
+          fill="#FFF"
+          smoothness={{
+            movement: 0.2,
+            scale: 0.1,
+            opacity: 0.2,
+          }}
+          targetOpacity={0.8}
+        />
         <Component {...pageProps} />
       </NextUIProvider>
     </IntlProvider>

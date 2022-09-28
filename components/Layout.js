@@ -102,7 +102,12 @@ export const Layout = ({ children }) => {
           )}
         </Navbar.Content>
       </Navbar>
-      <div>{children}</div>
+      <div
+        className="mainAnimation"
+        // style={{ width: "100%", padding: 0, margin: 0 }}
+      >
+        {children}
+      </div>
       <Navbar maxWidth={"lg"}>
         <Navbar.Brand>
           <Avatar
