@@ -1,21 +1,15 @@
-# Hello World example
+# Hi! I'm Nahue👨🏻‍💻
 
-This example shows the most basic idea behind Next. We have 2 pages: `pages/index.js` and `pages/about.js`. The former responds to `/` requests and the latter to `/about`. Using `next/link` you can add hyperlinks between them with universal routing capabilities. The `day` directory shows that you can have subdirectories.
+A Front-end developer who loves finance. I'm a really curious, creative and passionate person. I love what I do.🤟
 
-## Deploy your own
+## Stack💻
+* React, React Native
+* Javascript, Typescript
+* Axios, Redux, Redux-saga
+* Figma
 
-Deploy the example using [Vercel](https://vercel.com):
+As I said, being curious plays a HUGE role in my life, not only in technology, but also in finance, design, music, and even medicine (especially neurosciences😱). I looove to read, play instruments, produce music, and do high-intensity sports/training. Lately, I've been interested in cars and mechanics in general.🔧 As you've noticed, I enjoy learning how things work.
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/import/project?template=https://github.com/vercel/next.js/tree/canary/examples/hello-world)
-
-## How to use
-
-Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init) or [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/) to bootstrap the example:
-
-```bash
-npx create-next-app --example hello-world hello-world-app
-# or
-yarn create next-app --example hello-world hello-world-app
-```
-
-Deploy it to the cloud with [Vercel](https://vercel.com/import?filter=next.js&utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
+## ¡Get in touch!
+* ⚡️LinkedIn: https://www.linkedin.com/in/nahuerodcast/
+* ⚡️Twitter: https://www.twitter.com/_nahuerod
