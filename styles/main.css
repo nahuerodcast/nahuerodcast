@@ -12,8 +12,8 @@
 .lightAnimation {
   background: radial-gradient(
     circle,
-    rgba(80, 9, 121, 0.12) 0%,
-    rgba(1, 1, 135, 0.06) 60%
+    rgba(80, 9, 121, 0.06) 0%,
+    rgba(1, 1, 135, 0.03) 60%
   );
   background-size: 150% 150%;
   animation: gradient 20s ease infinite;

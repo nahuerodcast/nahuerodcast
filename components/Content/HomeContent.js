@@ -24,11 +24,8 @@ export const HomeContent = () => {
     <Container
       css={{
         padding: 0,
-        // background: `radial-gradient(circle, rgba(80,9,121,${
-        //   isDark ? "0.3" : "0.1"
-        // }) 0%, rgba(0,0,0,0) 70%)`,
       }}
-      // className={`mainAnimation animate__animated animate__fadeIn`}
+      className={`animate__animated animate__fadeIn`}
     >
       <Container
         lg
@@ -43,6 +40,8 @@ export const HomeContent = () => {
             display: "flex",
             alignItems: "center",
             flexDirection: "row",
+            justifyContent: "space-between",
+            width: "100%",
             minHeight: "80vh",
           }}
         >
@@ -54,7 +53,9 @@ export const HomeContent = () => {
                 paddingBottom: 0,
                 marginBottom: 0,
                 fontSize: "$7xl",
+                lineHeight: "$xs",
               }}
+              className={`animate__animated animate__fadeInUp`}
             >
               {title}
             </Text>
@@ -62,7 +63,7 @@ export const HomeContent = () => {
               h3
               css={{
                 paddingTop: 0,
-                marginTop: "-10px",
+                marginTop: "8px",
               }}
             >
               BA, Argentina.
@@ -100,7 +101,7 @@ export const HomeContent = () => {
             isHoverable
             borderWeight="extrabold"
             css={{
-              width: "320px",
+              width: "400px",
               height: "320px",
               borderRadius: "52px",
             }}
@@ -108,9 +109,9 @@ export const HomeContent = () => {
             <Card.Image
               src="https://portfolio-nahue-rodcast.vercel.app/profile-pic.jpg"
               objectFit="cover"
-              width="100%"
               height={500}
               alt="Nahue Rodcast"
+              loading="lazy"
             />
           </Card>
         </div>

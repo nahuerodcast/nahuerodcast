@@ -33,7 +33,7 @@ function MyApp({ Component, pageProps }) {
           targets={[".link", "button"]}
           customClass="*"
           dimensions={30}
-          fill="#FFF"
+          fill={!darkMode.value ? "000000" : "#FFF"}
           smoothness={{
             movement: 0.2,
             scale: 0.1,
