@@ -8,9 +8,13 @@
   "page.home.description": "A Front-end developer who loves finance. I'm a really curious, creative and passionate person. I love what i do.",
   "page.home.show-more": "Show more",
   "page.experience.title": "Experience",
+  "page.experience.desc": "Right below i detail you the AWESOME companies which i had the pleasure to work with🚀",
   "page.experience.current": "Current",
+  "page.experience.visit": "Visit",
   "page.experience.company.bekeu.title": "Front-end developer",
   "page.experience.company.bekeu.desc": "Creating awesome B2B Marketplace for LATAM. Main Front-end developer for logged marketplace.",
   "page.experience.company.coderhouse.title": "Web Development Assistant",
-  "page.experience.company.coderhouse.desc": "Tracking of 80 students, code and challenges review, live class attendance confirmation"
+  "page.experience.company.coderhouse.desc": "Tracking of 80 students, code and challenges review, live class attendance confirmation.",
+  "page.experience.company.bmb.title": "SSR. CX Analyst",
+  "page.experience.company.bmb.desc": "Customer support for IT, treasury, compliance, securities, financial advisory, among others."
 }
