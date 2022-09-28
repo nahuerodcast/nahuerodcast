@@ -5,7 +5,7 @@ import {
   Text,
   Avatar,
   useTheme,
-  Switch
+  Switch,
 } from "@nextui-org/react";
 import useDarkMode from "use-dark-mode";
 import { useIntl } from "react-intl";
@@ -37,7 +37,11 @@ export const Layout = ({ children }) => {
   return (
     <Box
       css={{
-        maxW: "100%"
+        maxW: "100%",
+        minHeight: "100vh",
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "space-between",
       }}
     >
       <Navbar variant="sticky" maxWidth={"lg"}>
@@ -88,7 +92,7 @@ export const Layout = ({ children }) => {
                 <NextLink key={id} href={asPath} locale={loc}>
                   <div
                     style={{
-                      cursor: "pointer"
+                      cursor: "pointer",
                     }}
                   >
                     <Flag code={loc === "es" ? "arg" : "usa"} height="16" />
@@ -99,6 +103,24 @@ export const Layout = ({ children }) => {
         </Navbar.Content>
       </Navbar>
       <div>{children}</div>
+      <Navbar maxWidth={"lg"}>
+        <Navbar.Brand>
+          <Avatar
+            css={{ marginRight: "12px" }}
+            src="https://portfolio-nahue-rodcast.vercel.app/profile-pic.jpg"
+            size="sm"
+          />
+          <NextLink href="/" locale={locale}>
+            <Text css={{ marginRight: "4px", cursor: "pointer" }}>
+              {" "}
+              Nahue Rodcast{" "}
+            </Text>
+          </NextLink>
+        </Navbar.Brand>
+        <Navbar.Content hideIn="xs" variant="highlight-rounded">
+          Desarrollado por Nahuel Rodriguez
+        </Navbar.Content>
+      </Navbar>
     </Box>
   );
 };

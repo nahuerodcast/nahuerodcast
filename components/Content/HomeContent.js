@@ -4,7 +4,7 @@ import {
   Container,
   Card,
   Button,
-  useTheme
+  useTheme,
 } from "@nextui-org/react";
 import { useIntl } from "react-intl";
 import "animate.css";
@@ -19,7 +19,7 @@ export const HomeContent = () => {
   return (
     <Container
       lg
-      css={{ marginTop: "$3xl", padding: 0 }}
+      css={{ padding: 0 }}
       className="animate__animated animate__fadeIn"
     >
       <div
@@ -27,7 +27,7 @@ export const HomeContent = () => {
           display: "flex",
           alignItems: "center",
           flexDirection: "row",
-          maxWidth: "$lg"
+          maxWidth: "$lg",
         }}
       >
         <Container>
@@ -37,7 +37,7 @@ export const HomeContent = () => {
               textGradient: "45deg, $blue600 -20%, $pink600 50%",
               paddingBottom: 0,
               marginBottom: 0,
-              fontSize: "$7xl"
+              fontSize: "$7xl",
             }}
           >
             {title}
@@ -46,7 +46,7 @@ export const HomeContent = () => {
             h3
             css={{
               paddingTop: 0,
-              marginTop: "-10px"
+              marginTop: "-10px",
             }}
           >
             BA, Argentina.
@@ -65,13 +65,13 @@ export const HomeContent = () => {
               backgroundColor: "$accents9",
               normalShadow: "$accents4",
               marginTop: "24px",
-              color: "$accents0"
+              color: "$accents0",
             }}
             onClick={() =>
               window.scrollTo({
                 top: 0,
                 left: 0,
-                behavior: "smooth"
+                behavior: "smooth",
               })
             }
           >
@@ -85,7 +85,7 @@ export const HomeContent = () => {
           css={{
             width: "320px",
             height: "320px",
-            borderRadius: "52px"
+            borderRadius: "52px",
           }}
         >
           <Card.Image

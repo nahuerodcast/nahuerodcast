@@ -8,9 +8,13 @@
   "page.home.description": "Soy desarrollador de Front-end y me encantan las finanzas. Me considero una persona muy curiosa y creativa. Soy muy apasionado de lo que hago.",
   "page.home.show-more": "Ver más",
   "page.experience.title": "Experiencia",
+  "page.experience.desc": "A continuación les detallo las INCREÍBLES empresas en las cuales tuve la gran oportunidad de trabajar/colaborar🚀",
   "page.experience.current": "Actual",
+  "page.experience.visit": "Visitar",
   "page.experience.company.bekeu.title": "Desarrollador de front-end",
   "page.experience.company.bekeu.desc": "Creando un increíble Marketplace B2B para LATAM. Principal desarrollador de Front-end developer para marketplace interno.",
   "page.experience.company.coderhouse.title": "Tutor de Desarrollo Web",
-  "page.experience.company.coderhouse.desc": "Seguimiento de 80 alumnos, corrección de desafíos y pre-entregas, asistencia de clases en vivo"
+  "page.experience.company.coderhouse.desc": "Seguimiento de 80 alumnos, corrección de desafíos y pre-entregas, asistencia de clases en vivo",
+  "page.experience.company.bmb.title": "Analista de CX SSR.",
+  "page.experience.company.bmb.desc": "Trabajo en conjunto con desarrollo, tesorería, compliance, títulos, asesoría financiera, entre otros."
 }

@@ -4,7 +4,7 @@ import {
   Container,
   Card,
   Button,
-  useTheme
+  useTheme,
 } from "@nextui-org/react";
 import { useIntl } from "react-intl";
 import "animate.css";
@@ -18,7 +18,7 @@ export const ProjectsContent = () => {
 
   return (
     <Container lg css={{ marginTop: "$3xl", padding: 0 }}>
-      asdasd
+      Projects content
     </Container>
   );
 };
