@@ -15,6 +15,8 @@ export const HomeContent = () => {
   const title = intl.formatMessage({ id: "page.home.title" });
   const desc = intl.formatMessage({ id: "page.home.description" });
   const showMore = intl.formatMessage({ id: "page.home.show-more" });
+  const stack = intl.formatMessage({ id: "page.home.stack" });
+
   const { type, isDark } = useTheme();
   const ref = useRef(null);
 
@@ -118,24 +120,33 @@ export const HomeContent = () => {
         <div
           style={{
             display: "flex",
-            alignItems: "center",
-            flexDirection: "row",
-            maxWidth: "$lg",
+            justifyContent: "center",
+            width: "100%",
             minHeight: "80vh",
           }}
           ref={ref}
         >
-          <Container>
+          <Container
+            css={{
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+              width: "100%",
+              minHeight: "80vh",
+            }}
+          >
             <Text
               h1
               css={{
-                textGradient: "45deg, $blue600 -20%, $pink600 50%",
+                textGradient:
+                  "to right, rgb(74, 222, 128) -20%, rgb(6, 182, 212) 50%",
                 paddingBottom: 0,
                 marginBottom: 0,
                 fontSize: "$7xl",
+                marginTop: "250px",
               }}
             >
-              {title}
+              {stack}
             </Text>
             <Text
               h3
@@ -149,8 +160,9 @@ export const HomeContent = () => {
             <Text
               weight="500"
               size="$xl"
-              css={{ w: "65%", lineHeight: "24px" }}
+              css={{ w: "65%", lineHeight: "24px", textAlign: "center" }}
               color="$gray700"
+              textAlign="center"
             >
               {desc}
             </Text>
@@ -175,23 +187,6 @@ export const HomeContent = () => {
             </Button>
             <Spacer y={1} />
           </Container>
-          <Card
-            isHoverable
-            borderWeight="extrabold"
-            css={{
-              width: "320px",
-              height: "320px",
-              borderRadius: "52px",
-            }}
-          >
-            <Card.Image
-              src="https://portfolio-nahue-rodcast.vercel.app/profile-pic.jpg"
-              objectFit="cover"
-              width="100%"
-              height={500}
-              alt="Nahue Rodcast"
-            />
-          </Card>
         </div>
       </Container>
     </Container>
