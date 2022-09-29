@@ -9,6 +9,7 @@ import {
 import { useIntl } from "react-intl";
 import "animate.css";
 import { useRef, useState } from "react";
+import Fade from "react-reveal/Fade";
 
 export const HomeContent = () => {
   const intl = useIntl();
@@ -16,6 +17,7 @@ export const HomeContent = () => {
   const desc = intl.formatMessage({ id: "page.home.description" });
   const showMore = intl.formatMessage({ id: "page.home.show-more" });
   const stack = intl.formatMessage({ id: "page.home.stack" });
+  const stackDesc = intl.formatMessage({ id: "page.home.stack.desc" });
 
   const { type, isDark } = useTheme();
   const ref = useRef(null);
@@ -117,6 +119,7 @@ export const HomeContent = () => {
             />
           </Card>
         </div>
+
         <div
           style={{
             display: "flex",
@@ -135,28 +138,24 @@ export const HomeContent = () => {
               minHeight: "80vh",
             }}
           >
-            <Text
-              h1
-              css={{
-                textGradient:
-                  "to right, rgb(74, 222, 128) -20%, rgb(6, 182, 212) 50%",
-                paddingBottom: 0,
-                marginBottom: 0,
-                fontSize: "$7xl",
-                marginTop: "250px",
-              }}
-            >
-              {stack}
-            </Text>
-            <Text
-              h3
-              css={{
-                paddingTop: 0,
-                marginTop: "-10px",
-              }}
-            >
-              BA, Argentina.
-            </Text>
+            <Fade top>
+              <div>
+                <Text
+                  h1
+                  css={{
+                    textGradient:
+                      "to right, rgb(74, 222, 128) -20%, rgb(6, 182, 212) 50%",
+                    paddingBottom: 0,
+                    marginBottom: 0,
+                    fontSize: "$7xl",
+                    marginTop: "250px",
+                  }}
+                >
+                  {stack}
+                </Text>
+              </div>
+            </Fade>
+
             <Text
               weight="500"
               size="$xl"
@@ -164,27 +163,8 @@ export const HomeContent = () => {
               color="$gray700"
               textAlign="center"
             >
-              {desc}
+              {stackDesc}
             </Text>
-            <Button
-              shadow
-              css={{
-                backgroundColor: "$accents9",
-                normalShadow: "$accents4",
-                marginTop: "24px",
-                color: "$accents0",
-              }}
-              onClick={() => {
-                setShowMoreTransition(true);
-                window.scrollTo({
-                  top: 0,
-                  left: 0,
-                  behavior: "smooth",
-                });
-              }}
-            >
-              {showMore}
-            </Button>
             <Spacer y={1} />
           </Container>
         </div>
