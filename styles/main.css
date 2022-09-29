@@ -1,13 +1,23 @@
-/* * {
-  background: linear-gradient(-45deg, #000000, #192734, #15202b, #22303c);
-  background-size: 400% 400%;
-  animation: gradient 30s ease infinite;
+.mainAnimation {
+  background: radial-gradient(
+    circle,
+    rgba(80, 9, 121, 0.3) 0%,
+    rgba(1, 1, 135, 0.12) 60%
+  );
+  background-size: 120% 250%;
+  animation: gradient 20s ease infinite;
+  backdrop-filter: blur(80%);
 }
 
-.light {
-  background: linear-gradient(-45deg, #000000, #192734, #15202b, #22303c);
-  background-size: 400% 400%;
-  animation: gradient 30s ease infinite;
+.lightAnimation {
+  background: radial-gradient(
+    circle,
+    rgba(80, 9, 121, 0.06) 0%,
+    rgba(1, 1, 135, 0.03) 60%
+  );
+  background-size: 150% 150%;
+  animation: gradient 20s ease infinite;
+  backdrop-filter: blur(80%);
 }
 
 @keyframes gradient {
@@ -15,9 +25,9 @@
     background-position: 0% 50%;
   }
   50% {
-    background-position: 100% 50%;
+    background-position: 100% 150%;
   }
   100% {
     background-position: 0% 50%;
   }
-} */
+}

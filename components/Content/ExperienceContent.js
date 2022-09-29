@@ -86,6 +86,8 @@ export const ExperienceContent = () => {
           display: "flex",
           flexDirection: "column",
           maxWidth: "$lg",
+          background:
+            "radial-gradient(circle, rgba(80,9,121,0.14889705882352944) 0%, rgba(0,0,0,0) 50%)",
         }}
       >
         <Text
