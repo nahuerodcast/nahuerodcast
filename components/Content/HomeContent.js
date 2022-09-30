@@ -5,11 +5,34 @@ import {
   Card,
   Button,
   useTheme,
+  Grid,
 } from "@nextui-org/react";
 import { useIntl } from "react-intl";
 import "animate.css";
 import { useRef, useState } from "react";
 import Fade from "react-reveal/Fade";
+import Image from "next/image";
+import reactLogo from "../../public/media/react-logo.png";
+import nextjsLogo from "../../public/media/nextjs-logo.png";
+import rnlogo from "../../public/media/rn-logo.png";
+import reduxLogo from "../../public/media/redux-logo.png";
+import reduxSagaLogo from "../../public/media/redux-saga-logo.png";
+import axiosLogo from "../../public/media/axios-logo.png";
+import tsLogo from "../../public/media/ts-logo.png";
+import jsLogo from "../../public/media/js-logo.png";
+import figmaLogo from "../../public/media/figma-logo.png";
+
+const stackImgs = [
+  { id: 1, name: "React", src: reactLogo },
+  { id: 2, name: "Next-JS", src: nextjsLogo },
+  { id: 3, name: "React Native", src: rnlogo },
+  { id: 4, name: "Redux", src: reduxLogo },
+  { id: 5, name: "Redux Saga", src: reduxSagaLogo },
+  { id: 6, name: "Axios", src: axiosLogo },
+  { id: 7, name: "Typescript", src: tsLogo },
+  { id: 8, name: "Javascript ES6", src: jsLogo },
+  { id: 9, name: "Figma", src: figmaLogo },
+];
 
 export const HomeContent = () => {
   const intl = useIntl();
@@ -125,7 +148,7 @@ export const HomeContent = () => {
             display: "flex",
             justifyContent: "center",
             width: "100%",
-            minHeight: "80vh",
+            minHeight: "100vh",
           }}
           ref={ref}
         >
@@ -159,12 +182,44 @@ export const HomeContent = () => {
             <Text
               weight="500"
               size="$xl"
-              css={{ w: "65%", lineHeight: "24px", textAlign: "center" }}
+              css={{
+                w: "65%",
+                lineHeight: "24px",
+                textAlign: "center",
+                marginBottom: "48px",
+              }}
               color="$gray700"
               textAlign="center"
             >
               {stackDesc}
             </Text>
+            <Grid.Container gap={2} justify="center">
+              {stackImgs.map((stckimg, id) => {
+                return (
+                  <Grid xs key={id}>
+                    <a
+                      style={{
+                        position: "relative",
+                        width: "350px",
+                        height: "120px",
+                        paddingBottom: "20%",
+                      }}
+                      className="stackLogos"
+                      href={`https://www.google.com.ar/search?q=${stckimg.name}`}
+                      target="_blank"
+                    >
+                      <Image
+                        alt={stckimg.name}
+                        src={stckimg.src}
+                        layout="fill"
+                        objectFit="contain"
+                        draggable="false"
+                      />
+                    </a>
+                  </Grid>
+                );
+              })}
+            </Grid.Container>
             <Spacer y={1} />
           </Container>
         </div>
