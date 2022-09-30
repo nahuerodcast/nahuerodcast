@@ -31,3 +31,11 @@
     background-position: 0% 50%;
   }
 }
+
+.stackLogos {
+  transition: 300ms ease all;
+}
+
+.stackLogos:hover {
+  transform: scale(1.03);
+}

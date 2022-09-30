@@ -6,9 +6,6 @@ const nextConfig = {
     defaultLocale: "es",
     localeDetection: false,
   },
-  images: {
-    domains: ["portfolio-nahue-rodcast.vercel.app"],
-  },
 };
 
 module.exports = nextConfig;
