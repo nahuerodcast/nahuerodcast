@@ -63,15 +63,18 @@ export const Layout = ({ children }) => {
             }}
           >
             <Navbar.Brand>
-              <Avatar
-                css={{ marginRight: "12px" }}
-                src="https://portfolio-nahue-rodcast.vercel.app/profile-pic.jpg"
-                size="sm"
-              />
               <NextLink href="/" locale={locale}>
-                <Text css={{ marginRight: "4px", cursor: "pointer" }}>
-                  {" "}
-                  Nahue Rodcast{" "}
+                <Text
+                  h4
+                  css={{
+                    marginRight: "4px",
+                    cursor: "pointer",
+                    marginBottom: 0,
+                    fontWeight: "$semibold",
+                    letterSpacing: "$tighter",
+                  }}
+                >
+                  Nahue Rodcast
                 </Text>
               </NextLink>
             </Navbar.Brand>

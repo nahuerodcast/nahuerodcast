@@ -72,7 +72,7 @@ export const HomeContent = () => {
             minHeight: "80vh",
           }}
         >
-          <Container>
+          <Container css={{ padding: 0 }}>
             <Text
               h1
               css={{
@@ -107,7 +107,7 @@ export const HomeContent = () => {
               shadow
               css={{
                 backgroundColor: "$accents9",
-                normalShadow: "$accents4",
+                normalShadow: "$accents6",
                 marginTop: "24px",
                 color: "$accents0",
               }}
@@ -145,10 +145,7 @@ export const HomeContent = () => {
 
         <div
           style={{
-            display: "flex",
-            justifyContent: "center",
-            width: "100%",
-            minHeight: "100vh",
+            height: "100vh",
           }}
           ref={ref}
         >
@@ -157,28 +154,25 @@ export const HomeContent = () => {
               display: "flex",
               flexDirection: "column",
               alignItems: "center",
+              justifyContent: "center",
               width: "100%",
-              minHeight: "80vh",
+              height: "100%",
             }}
           >
-            <Fade top>
-              <div>
-                <Text
-                  h1
-                  css={{
-                    textGradient:
-                      "to right, rgb(74, 222, 128) -20%, rgb(6, 182, 212) 50%",
-                    paddingBottom: 0,
-                    marginBottom: 0,
-                    fontSize: "$7xl",
-                    marginTop: "250px",
-                  }}
-                >
-                  {stack}
-                </Text>
-              </div>
-            </Fade>
-
+            <div>
+              <Text
+                h1
+                css={{
+                  textGradient:
+                    "to right, rgb(74, 222, 128) -20%, rgb(6, 182, 212) 50%",
+                  paddingBottom: 0,
+                  marginBottom: 0,
+                  fontSize: "$7xl",
+                }}
+              >
+                {stack}
+              </Text>
+            </div>
             <Text
               weight="500"
               size="$xl"
