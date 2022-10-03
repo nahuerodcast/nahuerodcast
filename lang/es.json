@@ -20,5 +20,7 @@
   "page.experience.company.coderhouse.title": "Tutor de Desarrollo Web",
   "page.experience.company.coderhouse.desc": "Seguimiento de 80 alumnos, corrección de desafíos y pre-entregas, asistencia de clases en vivo",
   "page.experience.company.bmb.title": "Analista de CX SSR.",
-  "page.experience.company.bmb.desc": "Trabajo en conjunto con desarrollo, tesorería, compliance, títulos, asesoría financiera, entre otros."
+  "page.experience.company.bmb.desc": "Trabajo en conjunto con desarrollo, tesorería, compliance, títulos, asesoría financiera, entre otros.",
+  "footer.developed-by": "Desarrollado por Nahuel Rodriguez",
+  "footer.developed-by.desc": "Usando NextJS, NextUI, y Vercel"
 }

@@ -20,5 +20,7 @@
   "page.experience.company.coderhouse.title": "Web Development Assistant",
   "page.experience.company.coderhouse.desc": "Tracking of 80 students, code and challenges review, live class attendance confirmation.",
   "page.experience.company.bmb.title": "SSR. CX Analyst",
-  "page.experience.company.bmb.desc": "Customer support for IT, treasury, compliance, securities, financial advisory, among others."
+  "page.experience.company.bmb.desc": "Customer support for IT, treasury, compliance, securities, financial advisory, among others.",
+  "footer.developed-by": "Developed by Nahuel Rodriguez",
+  "footer.developed-by.desc": "Using NextJS, NextUI, y Vercel"
 }

@@ -43,7 +43,7 @@ function MyApp({ Component, pageProps }) {
           targetOpacity={0.8}
         />
         <Component {...pageProps} />
-        <ScrollTopButton />
+        {/* <ScrollTopButton /> */}
       </NextUIProvider>
     </IntlProvider>
   );

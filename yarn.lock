@@ -1157,6 +1157,11 @@
   "resolved" "https://registry.npmjs.org/react-iconly/-/react-iconly-2.2.5.tgz"
   "version" "2.2.5"
 
+"react-icons@^4.4.0":
+  "integrity" "sha512-fSbvHeVYo/B5/L4VhB7sBA1i2tS8MkT0Hb9t2H1AVPkwGfVHLJCqyr2Py9dKMxsyM63Eng1GkdZfbWj+Fmv8Rg=="
+  "resolved" "https://registry.npmjs.org/react-icons/-/react-icons-4.4.0.tgz"
+  "version" "4.4.0"
+
 "react-interactive@^0.8.1":
   "integrity" "sha512-mmRvA9aKP7zu9kVfP1AX1egX8tFlnE3DDXq92z0JTZezfOpmeQBzr77O1+mTV54OOmn+M2t6c5kFD5VnuFoM7A=="
   "resolved" "https://registry.npmjs.org/react-interactive/-/react-interactive-0.8.3.tgz"

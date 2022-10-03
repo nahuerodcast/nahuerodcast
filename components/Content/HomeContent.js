@@ -47,6 +47,8 @@ export const HomeContent = () => {
   const ref = useRef(null);
   const ref2 = useRef(null);
 
+  console.log(ref2.current);
+
   const [showMoreTransition, setShowMoreTransition] = useState(false);
 
   return (
