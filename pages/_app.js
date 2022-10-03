@@ -8,6 +8,7 @@ import "animate.css";
 import "../styles/main.css";
 import CustomCursor from "custom-cursor-react";
 import "custom-cursor-react/dist/index.css";
+import ScrollTopButton from "../components/ScrollTopButton";
 
 function MyApp({ Component, pageProps }) {
   const lightTheme = createTheme({
@@ -42,6 +43,7 @@ function MyApp({ Component, pageProps }) {
           targetOpacity={0.8}
         />
         <Component {...pageProps} />
+        <ScrollTopButton />
       </NextUIProvider>
     </IntlProvider>
   );
