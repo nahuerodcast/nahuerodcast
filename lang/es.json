@@ -5,10 +5,12 @@
   "navbar.experience": "Experiencia",
   "navbar.contact": "Contacto",
   "page.home.title": "Desarrollador de Front-end",
-  "page.home.description": "Soy desarrollador de Front-end y me encantan las finanzas. Me considero una persona muy curiosa y creativa. Soy muy apasionado de lo que hago.",
+  "page.home.description": "Soy desarrollador de Front-end y me encantan las finanzas. Me considero una persona muy curiosa y creativa. Soy muy apasionado de lo que hago.🤟",
   "page.home.show-more": "Ver más",
   "page.home.stack": "Tecnologías con las que trabajo",
   "page.home.stack.desc": "A continuación detallo las tecnologías con las que estuve trabajando últimamente💻",
+  "page.home.about-me.title": "Acerca de mi",
+  "page.home.about-me.desc": "Como mencioné anteriormente ser curioso cumple un rol enorme en mi vida, no solo en tecnología, si no también en finanzas, diseño, música, hasta incluso medicina (especialmente neurociencias)😱. Aaaamo leer, tocar instrumentos, producir música y hacer entrenamientos de alta intensidad. Últimamente estoy muy interesado en autos y mecánica en general🔧. Como pudieron notar me encanta aprender cómo funcionan las cosas",
   "page.experience.title": "Experiencia",
   "page.experience.desc": "A continuación detallo las INCREÍBLES empresas en las cuales tuve la gran oportunidad de trabajar/colaborar🚀",
   "page.experience.current": "Actual",
@@ -18,5 +20,7 @@
   "page.experience.company.coderhouse.title": "Tutor de Desarrollo Web",
   "page.experience.company.coderhouse.desc": "Seguimiento de 80 alumnos, corrección de desafíos y pre-entregas, asistencia de clases en vivo",
   "page.experience.company.bmb.title": "Analista de CX SSR.",
-  "page.experience.company.bmb.desc": "Trabajo en conjunto con desarrollo, tesorería, compliance, títulos, asesoría financiera, entre otros."
+  "page.experience.company.bmb.desc": "Trabajo en conjunto con desarrollo, tesorería, compliance, títulos, asesoría financiera, entre otros.",
+  "footer.developed-by": "Desarrollado por Nahuel Rodriguez",
+  "footer.developed-by.desc": "Usando NextJS, NextUI, y Vercel"
 }

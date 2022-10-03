@@ -10,7 +10,6 @@ import {
 import { useIntl } from "react-intl";
 import "animate.css";
 import { useRef, useState } from "react";
-import Fade from "react-reveal/Fade";
 import Image from "next/image";
 import reactLogo from "../../public/media/react-logo.png";
 import nextjsLogo from "../../public/media/nextjs-logo.png";
@@ -41,9 +40,14 @@ export const HomeContent = () => {
   const showMore = intl.formatMessage({ id: "page.home.show-more" });
   const stack = intl.formatMessage({ id: "page.home.stack" });
   const stackDesc = intl.formatMessage({ id: "page.home.stack.desc" });
+  const aboutMeTitle = intl.formatMessage({ id: "page.home.about-me.title" });
+  const aboutMeDesc = intl.formatMessage({ id: "page.home.about-me.desc" });
 
   const { type, isDark } = useTheme();
   const ref = useRef(null);
+  const ref2 = useRef(null);
+
+  console.log(ref2.current);
 
   const [showMoreTransition, setShowMoreTransition] = useState(false);
 
@@ -72,7 +76,7 @@ export const HomeContent = () => {
             minHeight: "80vh",
           }}
         >
-          <Container>
+          <Container css={{ padding: 0 }}>
             <Text
               h1
               css={{
@@ -107,15 +111,13 @@ export const HomeContent = () => {
               shadow
               css={{
                 backgroundColor: "$accents9",
-                normalShadow: "$accents4",
+                normalShadow: "$accents6",
                 marginTop: "24px",
                 color: "$accents0",
               }}
               onClick={() => {
                 setShowMoreTransition(true);
                 ref.current.scrollIntoView({
-                  top: 0,
-                  left: 0,
                   behavior: "smooth",
                 });
               }}
@@ -145,10 +147,7 @@ export const HomeContent = () => {
 
         <div
           style={{
-            display: "flex",
-            justifyContent: "center",
-            width: "100%",
-            minHeight: "100vh",
+            height: "100vh",
           }}
           ref={ref}
         >
@@ -157,28 +156,25 @@ export const HomeContent = () => {
               display: "flex",
               flexDirection: "column",
               alignItems: "center",
+              justifyContent: "center",
               width: "100%",
-              minHeight: "80vh",
+              height: "100%",
             }}
           >
-            <Fade top>
-              <div>
-                <Text
-                  h1
-                  css={{
-                    textGradient:
-                      "to right, rgb(74, 222, 128) -20%, rgb(6, 182, 212) 50%",
-                    paddingBottom: 0,
-                    marginBottom: 0,
-                    fontSize: "$7xl",
-                    marginTop: "250px",
-                  }}
-                >
-                  {stack}
-                </Text>
-              </div>
-            </Fade>
-
+            <div>
+              <Text
+                h1
+                css={{
+                  textGradient:
+                    "to right, rgb(74, 222, 128) -20%, rgb(6, 182, 212) 50%",
+                  paddingBottom: 0,
+                  marginBottom: 0,
+                  fontSize: "$7xl",
+                }}
+              >
+                {stack}
+              </Text>
+            </div>
             <Text
               weight="500"
               size="$xl"
@@ -220,6 +216,72 @@ export const HomeContent = () => {
                 );
               })}
             </Grid.Container>
+
+            <Spacer y={1} />
+            <Button
+              shadow
+              css={{
+                backgroundColor: "$accents9",
+                normalShadow: "$accents6",
+                marginTop: "24px",
+                color: "$accents0",
+              }}
+              onClick={() => {
+                setShowMoreTransition(true);
+                ref2.current.scrollIntoView({
+                  top: 0,
+                  left: 0,
+                  behavior: "smooth",
+                });
+              }}
+            >
+              {showMore}
+            </Button>
+          </Container>
+        </div>
+        <div
+          style={{
+            height: "50vh",
+          }}
+          ref={ref2}
+        >
+          <Container
+            css={{
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+              justifyContent: "center",
+              width: "100%",
+              height: "100%",
+            }}
+          >
+            <div>
+              <Text
+                h1
+                css={{
+                  textGradient: "45deg, $pink600 10%, $red600 80%",
+                  paddingBottom: 0,
+                  marginBottom: 0,
+                  fontSize: "$7xl",
+                }}
+              >
+                {aboutMeTitle}
+              </Text>
+            </div>
+            <Text
+              weight="500"
+              size="$xl"
+              css={{
+                w: "85%",
+                lineHeight: "24px",
+                textAlign: "center",
+                marginBottom: "48px",
+              }}
+              color="$gray700"
+              textAlign="center"
+            >
+              {aboutMeDesc}
+            </Text>
             <Spacer y={1} />
           </Container>
         </div>
