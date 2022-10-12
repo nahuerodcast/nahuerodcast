@@ -9,6 +9,7 @@ import "../styles/main.css";
 import CustomCursor from "custom-cursor-react";
 import "custom-cursor-react/dist/index.css";
 import ScrollTopButton from "../components/ScrollTopButton";
+import Head from "next/head";
 
 function MyApp({ Component, pageProps }) {
   const lightTheme = createTheme({
@@ -21,7 +22,7 @@ function MyApp({ Component, pageProps }) {
     theme: { colors: { darky: "#FFFFFF" } },
   });
   const darkMode = useDarkMode(false);
-  const { locale } = useRouter();
+  const { locale, pathname } = useRouter();
   const messages = {
     es,
     en,
@@ -42,6 +43,13 @@ function MyApp({ Component, pageProps }) {
           }}
           targetOpacity={0.8}
         />
+        <Head>
+          <link rel="shortcut icon" href="./public/favicon.ico" />
+          <meta
+            name="viewport"
+            content="initial-scale=1.0, width=device-width"
+          />
+        </Head>
         <Component {...pageProps} />
         {/* <ScrollTopButton /> */}
       </NextUIProvider>

@@ -18,6 +18,7 @@ import { SunIcon } from "../components/SunIcon";
 import NextLink from "next/link";
 import { TiSocialLinkedin, TiSocialTwitter } from "react-icons/ti";
 import { AiFillGithub } from "react-icons/ai";
+import Head from "next/head";
 
 export const Layout = ({ children }) => {
   const [flag, setFlag] = useState(false);
@@ -35,7 +36,7 @@ export const Layout = ({ children }) => {
     id: "footer.developed-by.desc",
   });
 
-  const { locale, locales, asPath } = useRouter();
+  const { locale, locales, asPath, pathname } = useRouter();
 
   const handleScrollTo = () => {
     window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
@@ -51,6 +52,9 @@ export const Layout = ({ children }) => {
         justifyContent: "space-between",
       }}
     >
+      <Head>
+        <title>{pathname}</title>
+      </Head>
       <Navbar variant="sticky" maxWidth={"xl"}>
         <div
           style={{
