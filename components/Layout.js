@@ -53,7 +53,16 @@ export const Layout = ({ children }) => {
       }}
     >
       <Head>
-        <title>{pathname}</title>
+        <title>
+          Nahue Rodcast{" "}
+          {pathname === "/"
+            ? ""
+            : pathname.includes("projects")
+            ? `- ${projects}`
+            : pathname.includes("experience")
+            ? `- ${experience}`
+            : pathname.includes("contact") && `- ${contact}`}
+        </title>
       </Head>
       <Navbar variant="sticky" maxWidth={"xl"}>
         <div

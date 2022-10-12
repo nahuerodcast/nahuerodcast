@@ -189,33 +189,38 @@ export const HomeContent = () => {
             >
               {stackDesc}
             </Text>
-            <Grid.Container gap={2} justify="center">
+            <div
+              style={{
+                display: "flex",
+                flexWrap: "wrap",
+                width: "70%",
+                justifyContent: "center",
+              }}
+            >
               {stackImgs.map((stckimg, id) => {
                 return (
-                  <Grid xs key={id}>
-                    <a
-                      style={{
-                        position: "relative",
-                        width: "350px",
-                        height: "120px",
-                        paddingBottom: "20%",
-                      }}
-                      className="stackLogos"
-                      href={`https://www.google.com.ar/search?q=${stckimg.name}`}
-                      target="_blank"
-                    >
-                      <Image
-                        alt={stckimg.name}
-                        src={stckimg.src}
-                        layout="fill"
-                        objectFit="contain"
-                        draggable="false"
-                      />
-                    </a>
-                  </Grid>
+                  <a
+                    style={{
+                      position: "relative",
+                      width: "180px",
+                      height: "90px",
+                    }}
+                    className="stackLogos"
+                    href={`https://www.google.com.ar/search?q=${stckimg.name}`}
+                    target="_blank"
+                    key={id}
+                  >
+                    <Image
+                      alt={stckimg.name}
+                      src={stckimg.src}
+                      layout="fill"
+                      objectFit="contain"
+                      draggable="false"
+                    />
+                  </a>
                 );
               })}
-            </Grid.Container>
+            </div>
 
             <Spacer y={1} />
             <Button
