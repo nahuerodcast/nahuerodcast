@@ -53,7 +53,16 @@ export const Layout = ({ children }) => {
       }}
     >
       <Head>
-        <title>{pathname}</title>
+        <title>
+          Nahue Rodcast{" "}
+          {pathname === "/"
+            ? ""
+            : pathname.includes("projects")
+            ? `- ${projects}`
+            : pathname.includes("experience")
+            ? `- ${experience}`
+            : pathname.includes("contact") && `- ${contact}`}
+        </title>
       </Head>
       <Navbar variant="sticky" maxWidth={"xl"}>
         <div
@@ -88,15 +97,20 @@ export const Layout = ({ children }) => {
                 </Text>
               </NextLink>
             </Navbar.Brand>
-            <Navbar.Content hideIn="xs" variant="highlight-rounded">
+            <Navbar.Content
+              hideIn="xs"
+              variant="highlight-rounded"
+              activeColor="secondary"
+              css={{ fontSize: "$sm" }}
+            >
               <NextLink href={`/`} locale={locale}>
                 <Navbar.Link isActive={asPath === "/"}>{aboutMe}</Navbar.Link>
               </NextLink>
-              {/* <NextLink href={`/projects`} locale={locale}>
+              <NextLink href={`/projects`} locale={locale}>
                 <Navbar.Link isActive={asPath.includes("projects")}>
                   {projects}
                 </Navbar.Link>
-              </NextLink> */}
+              </NextLink>
               <NextLink href={`/experience`} locale={locale}>
                 <Navbar.Link isActive={asPath.includes("experience")}>
                   {experience}

@@ -42,6 +42,7 @@ export const HomeContent = () => {
   const stackDesc = intl.formatMessage({ id: "page.home.stack.desc" });
   const aboutMeTitle = intl.formatMessage({ id: "page.home.about-me.title" });
   const aboutMeDesc = intl.formatMessage({ id: "page.home.about-me.desc" });
+  const downloadCV = intl.formatMessage({ id: "page.home.download-cv" });
 
   const { type, isDark } = useTheme();
   const ref = useRef(null);
@@ -85,6 +86,7 @@ export const HomeContent = () => {
                 marginBottom: 0,
                 fontSize: "$7xl",
                 lineHeight: "$xs",
+                width: "70%",
               }}
               className={`animate__animated animate__fadeInUp`}
             >
@@ -189,33 +191,38 @@ export const HomeContent = () => {
             >
               {stackDesc}
             </Text>
-            <Grid.Container gap={2} justify="center">
+            <div
+              style={{
+                display: "flex",
+                flexWrap: "wrap",
+                width: "70%",
+                justifyContent: "center",
+              }}
+            >
               {stackImgs.map((stckimg, id) => {
                 return (
-                  <Grid xs key={id}>
-                    <a
-                      style={{
-                        position: "relative",
-                        width: "350px",
-                        height: "120px",
-                        paddingBottom: "20%",
-                      }}
-                      className="stackLogos"
-                      href={`https://www.google.com.ar/search?q=${stckimg.name}`}
-                      target="_blank"
-                    >
-                      <Image
-                        alt={stckimg.name}
-                        src={stckimg.src}
-                        layout="fill"
-                        objectFit="contain"
-                        draggable="false"
-                      />
-                    </a>
-                  </Grid>
+                  <a
+                    style={{
+                      position: "relative",
+                      width: "180px",
+                      height: "90px",
+                    }}
+                    className="stackLogos"
+                    href={`https://www.google.com.ar/search?q=${stckimg.name}`}
+                    target="_blank"
+                    key={id}
+                  >
+                    <Image
+                      alt={stckimg.name}
+                      src={stckimg.src}
+                      layout="fill"
+                      objectFit="contain"
+                      draggable="false"
+                    />
+                  </a>
                 );
               })}
-            </Grid.Container>
+            </div>
 
             <Spacer y={1} />
             <Button
@@ -275,7 +282,7 @@ export const HomeContent = () => {
                 w: "85%",
                 lineHeight: "24px",
                 textAlign: "center",
-                marginBottom: "48px",
+                marginBottom: "12px",
               }}
               color="$gray700"
               textAlign="center"
@@ -283,6 +290,19 @@ export const HomeContent = () => {
               {aboutMeDesc}
             </Text>
             <Spacer y={1} />
+            <a href="../../public/media/rodriguez-casco-nahuel.pdf" download>
+              <Button
+                shadow
+                css={{
+                  backgroundColor: "$accents9",
+                  normalShadow: "$accents6",
+                  color: "$accents0",
+                  marginBottom: "48px",
+                }}
+              >
+                {downloadCV}
+              </Button>
+            </a>
           </Container>
         </div>
       </Container>
