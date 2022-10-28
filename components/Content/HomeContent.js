@@ -225,7 +225,7 @@ export const HomeContent = () => {
             </div>
 
             <Spacer y={1} />
-            <Button
+            {/* <Button
               shadow
               css={{
                 backgroundColor: "$accents9",
@@ -243,7 +243,7 @@ export const HomeContent = () => {
               }}
             >
               {showMore}
-            </Button>
+            </Button> */}
           </Container>
         </div>
         <div
