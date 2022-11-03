@@ -23,6 +23,8 @@
   "page.experience.company.coderhouse.desc": "Seguimiento de 80 alumnos, corrección de desafíos y pre-entregas, asistencia de clases en vivo",
   "page.experience.company.bmb.title": "Analista de CX SSR.",
   "page.experience.company.bmb.desc": "Trabajo en conjunto con desarrollo, tesorería, compliance, títulos, asesoría financiera, entre otros.",
+  "page.projects.title": "Proyectos",
+  "page.projects.desc": "Estos son los proyectos en los que estuve trabajando últimamente👾",
   "footer.developed-by": "Desarrollado por Nahuel Rodriguez",
   "footer.developed-by.desc": "Usando NextJS, NextUI, y Vercel"
 }
