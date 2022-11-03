@@ -25,6 +25,7 @@
   "page.experience.company.bmb.desc": "Customer support for IT, treasury, compliance, securities, financial advisory, among others.",
   "page.projects.title": "Projects",
   "page.projects.desc": "These are the projects I've been recently working on👾",
+  "page.contact.desc": "Get in touch, let's talk.",
   "footer.developed-by": "Developed by Nahuel Rodriguez",
   "footer.developed-by.desc": "Using NextJS, NextUI, y Vercel"
 }

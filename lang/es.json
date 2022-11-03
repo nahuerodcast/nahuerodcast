@@ -25,6 +25,7 @@
   "page.experience.company.bmb.desc": "Trabajo en conjunto con desarrollo, tesorería, compliance, títulos, asesoría financiera, entre otros.",
   "page.projects.title": "Proyectos",
   "page.projects.desc": "Estos son los proyectos en los que estuve trabajando últimamente👾",
+  "page.contact.desc": "Pongámonos en contacto.",
   "footer.developed-by": "Desarrollado por Nahuel Rodriguez",
   "footer.developed-by.desc": "Usando NextJS, NextUI, y Vercel"
 }

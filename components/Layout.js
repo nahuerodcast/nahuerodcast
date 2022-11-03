@@ -116,11 +116,11 @@ export const Layout = ({ children }) => {
                   {experience}
                 </Navbar.Link>
               </NextLink>
-              {/* <NextLink href={`/contact`} locale={locale}>
+              <NextLink href={`/contact`} locale={locale}>
                 <Navbar.Link isActive={asPath.includes("contact")}>
                   {contact}
-                </Navbar.Link> 
-              </NextLink>*/}
+                </Navbar.Link>
+              </NextLink>
             </Navbar.Content>
             <Navbar.Content>
               <Switch

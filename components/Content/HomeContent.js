@@ -249,7 +249,7 @@ export const HomeContent = () => {
         </div>
         <div
           style={{
-            height: "50vh",
+            height: "60vh",
           }}
           ref={ref2}
         >
@@ -258,7 +258,6 @@ export const HomeContent = () => {
               display: "flex",
               flexDirection: "column",
               alignItems: "center",
-              justifyContent: "center",
               width: "100%",
               height: "100%",
             }}
