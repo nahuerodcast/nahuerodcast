@@ -3,8 +3,12 @@ import { AiFillGithub } from "react-icons/ai";
 import { HiExternalLink } from "react-icons/hi";
 
 const RepoCard = ({ repo }) => (
-  <a href={repo.html_url} target={"_blank"}>
-    <Card css={{ width: "250px" }} isHoverable isPressable>
+  <a
+    href={repo.html_url}
+    target={"_blank"}
+    className={`animate__animated animate__fadeIn`}
+  >
+    <Card css={{ width: "250px", height: "300px" }} isHoverable isPressable>
       <Card.Header
         css={{ position: "absolute", zIndex: 1, top: 5, height: "100%" }}
       >
@@ -56,7 +60,7 @@ const RepoCard = ({ repo }) => (
         </Col>
       </Card.Header>
       <Card.Image
-        src="https://nextui.org/images/card-example-4.jpeg"
+        src="https://media.istockphoto.com/photos/abstract-background-with-black-wavy-stripes-abstract-cut-paper-soft-picture-id1298777114?b=1&k=20&m=1298777114&s=170667a&w=0&h=EomSXxg_r5bnKNsukEUbYWWydWjhs6RhFLg4-zWNzyg="
         objectFit="cover"
         width="100%"
         height={340}

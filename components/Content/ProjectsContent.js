@@ -31,7 +31,11 @@ export const ProjectsContent = ({ data }) => {
   console.log(repos);
 
   return (
-    <Container lg css={{ marginTop: "$3xl", padding: 0, minHeight: "100vh" }}>
+    <Container
+      lg
+      css={{ marginTop: "$3xl", minHeight: "100vh" }}
+      className={`animate__animated animate__fadeIn`}
+    >
       <Text
         h1
         css={{
