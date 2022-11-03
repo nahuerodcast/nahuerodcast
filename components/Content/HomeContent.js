@@ -43,6 +43,7 @@ export const HomeContent = () => {
   const aboutMeTitle = intl.formatMessage({ id: "page.home.about-me.title" });
   const aboutMeDesc = intl.formatMessage({ id: "page.home.about-me.desc" });
   const downloadCV = intl.formatMessage({ id: "page.home.download-cv" });
+  const cv = intl.formatMessage({ id: "page.home.about-me-cv" });
 
   const { type, isDark } = useTheme();
   const ref = useRef(null);
@@ -225,7 +226,7 @@ export const HomeContent = () => {
             </div>
 
             <Spacer y={1} />
-            <Button
+            {/* <Button
               shadow
               css={{
                 backgroundColor: "$accents9",
@@ -243,7 +244,7 @@ export const HomeContent = () => {
               }}
             >
               {showMore}
-            </Button>
+            </Button> */}
           </Container>
         </div>
         <div
@@ -290,7 +291,10 @@ export const HomeContent = () => {
               {aboutMeDesc}
             </Text>
             <Spacer y={1} />
-            <a href="../../public/media/rodriguez-casco-nahuel.pdf" download>
+            <a
+              href="https://drive.google.com/file/d/1wvt6qHhVhnRUw6rJNsoa_jnoF_bGvGRP/view?usp=sharing"
+              target={"_blank"}
+            >
               <Button
                 shadow
                 css={{
