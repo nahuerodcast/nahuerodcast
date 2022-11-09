@@ -101,7 +101,6 @@ export const Layout = ({ children }) => {
               hideIn="xs"
               variant="highlight-rounded"
               activeColor="secondary"
-              css={{ fontSize: "$sm" }}
             >
               <NextLink href={`/`} locale={locale}>
                 <Navbar.Link isActive={asPath === "/"}>{aboutMe}</Navbar.Link>
@@ -173,20 +172,21 @@ export const Layout = ({ children }) => {
             flexDirection: "row",
             alignItems: "center",
             justifyContent: "center",
+            gap: "5px",
           }}
         >
           <a href="https://www.linkedin.com/in/nahuerodcast" target="_blank">
             <TiSocialLinkedin
-              size="25px"
+              size="35px"
               color={`${isDark ? "white" : "black"}`}
             />
           </a>
           <a href="https://www.github.com/nahuerodcast" target="_blank">
-            <AiFillGithub size="25px" color={`${isDark ? "white" : "black"}`} />
+            <AiFillGithub size="35px" color={`${isDark ? "white" : "black"}`} />
           </a>
           <a href="https://www.twitter.com/_nahuerod" target="_blank">
             <TiSocialTwitter
-              size="25px"
+              size="35px"
               color={`${isDark ? "white" : "black"}`}
             />
           </a>

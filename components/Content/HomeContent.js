@@ -87,7 +87,6 @@ export const HomeContent = () => {
                 marginBottom: 0,
                 fontSize: "$7xl",
                 lineHeight: "$xs",
-                width: "70%",
               }}
               className={`animate__animated animate__fadeInUp`}
             >

@@ -29,6 +29,7 @@ function MyApp({ Component, pageProps }) {
     en,
   };
 
+  console.log("darkMode.value", darkMode.value);
   return (
     <IntlProvider locale={locale} messages={messages[locale]}>
       <NextUIProvider theme={darkMode.value ? darkTheme : lightTheme}>
