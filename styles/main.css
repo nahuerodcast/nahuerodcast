@@ -48,3 +48,17 @@
   cursor: pointer;
   padding: 1px 8px;
 }
+
+.backgroundImageCard::after {
+  position: absolute;
+  content: "";
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: linear-gradient(
+    to top,
+    rgba(102, 34, 170, 0.3) 0%,
+    rgba(0, 0, 0, 0.7) 100%
+  );
+}

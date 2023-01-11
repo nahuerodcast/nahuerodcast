@@ -17,7 +17,7 @@ export const ProjectsContent = ({ data }) => {
   const fetchRepos = async () => {
     try {
       const res = await axios.get(
-        `https://api.github.com/search/repositories?q=user:${username}+sort:author-date-asc`
+        `https://api.github.com/search/repositories?q=user:${username}&sort=author-date-asc`
       );
       setRepos(res.data.items);
     } catch (err) {
@@ -64,10 +64,11 @@ export const ProjectsContent = ({ data }) => {
           marginTop: "44px",
           gap: "24px",
           padding: 0,
+          marginBottom: "24px",
         }}
       >
-        {repos.map((repo) => (
-          <RepoCard repo={repo} key={repo} />
+        {repos.map((repo, id) => (
+          <RepoCard repo={repo} key={id} />
         ))}
       </Container>
     </Container>
