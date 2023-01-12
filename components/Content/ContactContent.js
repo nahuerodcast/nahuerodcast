@@ -15,7 +15,7 @@ export const ContactContent = () => {
     <Container
       lg
       css={{
-        minHeight: "88vh",
+        minHeight: "44vh",
         display: "flex",
         flexDirection: "column",
         justifyContent: "center",

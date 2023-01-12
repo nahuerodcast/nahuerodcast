@@ -9,6 +9,7 @@ import {
 } from "@nextui-org/react";
 import { useIntl } from "react-intl";
 import "animate.css";
+import { ContactContent } from "../../components/Content/ContactContent";
 
 export const ExperienceContent = () => {
   const { type, isDark } = useTheme();
@@ -260,6 +261,7 @@ export const ExperienceContent = () => {
           );
         })}
       </div>
+      <ContactContent />
     </Container>
   );
 };

@@ -9,9 +9,9 @@ const RepoCard = ({ repo }) => {
     <a
       href={repo.html_url}
       target={"_blank"}
-      className={`animate__animated animate__fadeIn`}
+      className={`animate__animated animate__fadeIn card`}
     >
-      <Card css={{ width: "400px" }} isHoverable isPressable>
+      <Card css={{ width: "400px", height: "250px" }} isHoverable isPressable>
         <Card.Header
           css={{ position: "absolute", zIndex: 1, top: 5, height: "100%" }}
         >
@@ -26,23 +26,26 @@ const RepoCard = ({ repo }) => {
             <Container
               css={{
                 padding: "6px",
-                textShadow: "0px -1px 12px rgba(0,0,0,0.31)",
               }}
             >
               <Text
                 h4
                 color="white"
-                size={24}
+                size={26}
                 css={{ textShadow: "0px -1px 12px rgba(0,0,0,0.31)" }}
               >
                 {repo.name}
               </Text>
               <Text
                 size={14}
-                weight="bold"
+                weight="semibold"
                 transform="uppercase"
-                color="lightgray"
-                css={{ marginBottom: "12px", lineHeight: "22px" }}
+                color="white"
+                css={{
+                  marginBottom: "12px",
+                  lineHeight: "18px",
+                  textShadow: "0px -1px 12px rgba(0,0,0,0.31)",
+                }}
               >
                 {repo.description}
               </Text>
@@ -70,13 +73,13 @@ const RepoCard = ({ repo }) => {
             >
               <a href={repo.html_url} target="_blank">
                 <Button auto flat color="secondary">
-                  <AiFillGithub />
+                  Github <AiFillGithub style={{ marginLeft: "4px" }} />
                 </Button>
               </a>
               {repo.homepage && (
                 <a href={repo.homepage} target="_blank">
                   <Button auto flat color="secondary">
-                    <HiExternalLink />
+                    Web <HiExternalLink style={{ marginLeft: "4px" }} />
                   </Button>
                 </a>
               )}

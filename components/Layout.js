@@ -116,11 +116,6 @@ export const Layout = ({ children }) => {
                   {experience}
                 </Navbar.Link>
               </NextLink>
-              <NextLink href={`/contact`} locale={locale}>
-                <Navbar.Link isActive={asPath.includes("contact")}>
-                  {contact}
-                </Navbar.Link>
-              </NextLink>
             </Navbar.Content>
             <Navbar.Content>
               <Switch
@@ -144,6 +139,36 @@ export const Layout = ({ children }) => {
                     </NextLink>
                   )
               )}
+              <div
+                style={{
+                  display: "flex",
+                  flexDirection: "row",
+                  alignItems: "center",
+                  justifyContent: "center",
+                }}
+              >
+                <a
+                  href="https://www.linkedin.com/in/nahuerodcast"
+                  target="_blank"
+                >
+                  <TiSocialLinkedin
+                    size="28px"
+                    color={`${isDark ? "white" : "black"}`}
+                  />
+                </a>
+                <a href="https://www.github.com/nahuerodcast" target="_blank">
+                  <AiFillGithub
+                    size="28px"
+                    color={`${isDark ? "white" : "black"}`}
+                  />
+                </a>
+                <a href="https://www.twitter.com/_nahuerod" target="_blank">
+                  <TiSocialTwitter
+                    size="28px"
+                    color={`${isDark ? "white" : "black"}`}
+                  />
+                </a>
+              </div>
             </Navbar.Content>
           </Container>
         </div>
