@@ -101,7 +101,7 @@ export const Layout = ({ children }) => {
               hideIn="xs"
               variant="highlight-rounded"
               activeColor="secondary"
-              css={{ fontSize: "$sm" }}
+              css={{ fontSize: "$md" }}
             >
               <NextLink href={`/`} locale={locale}>
                 <Navbar.Link isActive={asPath === "/"}>{aboutMe}</Navbar.Link>
