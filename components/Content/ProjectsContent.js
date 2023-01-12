@@ -4,6 +4,7 @@ import "animate.css";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import RepoCard from "../Card";
+import { ContactContent } from "../../components/Content/ContactContent";
 
 export const ProjectsContent = ({ data }) => {
   const intl = useIntl();
@@ -71,6 +72,7 @@ export const ProjectsContent = ({ data }) => {
           <RepoCard repo={repo} key={id} />
         ))}
       </Container>
+      <ContactContent />
     </Container>
   );
 };

@@ -20,6 +20,7 @@ import axiosLogo from "../../public/media/axios-logo.png";
 import tsLogo from "../../public/media/ts-logo.png";
 import jsLogo from "../../public/media/js-logo.png";
 import figmaLogo from "../../public/media/figma-logo.png";
+import { ContactContent } from "../../components/Content/ContactContent";
 
 const stackImgs = [
   { id: 1, name: "React", src: reactLogo },
@@ -87,7 +88,6 @@ export const HomeContent = () => {
                 marginBottom: 0,
                 fontSize: "$7xl",
                 lineHeight: "$xs",
-                width: "70%",
               }}
               className={`animate__animated animate__fadeInUp`}
             >
@@ -105,12 +105,12 @@ export const HomeContent = () => {
             <Text
               weight="500"
               size="$xl"
-              css={{ w: "65%", lineHeight: "24px" }}
+              css={{ w: "55%", lineHeight: "24px" }}
               color="$gray700"
             >
               {desc}
             </Text>
-            <Button
+            {/* <Button
               shadow
               css={{
                 backgroundColor: "$accents9",
@@ -126,7 +126,7 @@ export const HomeContent = () => {
               }}
             >
               {showMore}
-            </Button>
+            </Button> */}
             <Spacer y={1} />
           </Container>
           <Card
@@ -247,12 +247,7 @@ export const HomeContent = () => {
             </Button> */}
           </Container>
         </div>
-        <div
-          style={{
-            height: "60vh",
-          }}
-          ref={ref2}
-        >
+        <div ref={ref2}>
           <Container
             css={{
               display: "flex",
@@ -308,6 +303,7 @@ export const HomeContent = () => {
             </a>
           </Container>
         </div>
+        <ContactContent />
       </Container>
     </Container>
   );

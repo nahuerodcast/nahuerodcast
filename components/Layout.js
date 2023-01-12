@@ -101,7 +101,7 @@ export const Layout = ({ children }) => {
               hideIn="xs"
               variant="highlight-rounded"
               activeColor="secondary"
-              css={{ fontSize: "$sm" }}
+              css={{ fontSize: "$md" }}
             >
               <NextLink href={`/`} locale={locale}>
                 <Navbar.Link isActive={asPath === "/"}>{aboutMe}</Navbar.Link>
@@ -114,11 +114,6 @@ export const Layout = ({ children }) => {
               <NextLink href={`/experience`} locale={locale}>
                 <Navbar.Link isActive={asPath.includes("experience")}>
                   {experience}
-                </Navbar.Link>
-              </NextLink>
-              <NextLink href={`/contact`} locale={locale}>
-                <Navbar.Link isActive={asPath.includes("contact")}>
-                  {contact}
                 </Navbar.Link>
               </NextLink>
             </Navbar.Content>
@@ -144,6 +139,36 @@ export const Layout = ({ children }) => {
                     </NextLink>
                   )
               )}
+              <div
+                style={{
+                  display: "flex",
+                  flexDirection: "row",
+                  alignItems: "center",
+                  justifyContent: "center",
+                }}
+              >
+                <a
+                  href="https://www.linkedin.com/in/nahuerodcast"
+                  target="_blank"
+                >
+                  <TiSocialLinkedin
+                    size="28px"
+                    color={`${isDark ? "white" : "black"}`}
+                  />
+                </a>
+                <a href="https://www.github.com/nahuerodcast" target="_blank">
+                  <AiFillGithub
+                    size="28px"
+                    color={`${isDark ? "white" : "black"}`}
+                  />
+                </a>
+                <a href="https://www.twitter.com/_nahuerod" target="_blank">
+                  <TiSocialTwitter
+                    size="28px"
+                    color={`${isDark ? "white" : "black"}`}
+                  />
+                </a>
+              </div>
             </Navbar.Content>
           </Container>
         </div>
