@@ -3,13 +3,20 @@ import { useIntl } from "react-intl";
 import "animate.css";
 import { TiSocialLinkedin, TiSocialTwitter } from "react-icons/ti";
 import { AiFillGithub } from "react-icons/ai";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 
-export const ContactContent = () => {
+export const ContactContent = (props) => {
   const intl = useIntl();
   const title = intl.formatMessage({ id: "navbar.contact" });
   const desc = intl.formatMessage({ id: "page.contact.desc" });
   const showMore = intl.formatMessage({ id: "page.home.show-more" });
   const { type, isDark } = useTheme();
+
+  useEffect(() => {
+    AOS.init();
+  }, []);
 
   return (
     <Container
@@ -21,6 +28,7 @@ export const ContactContent = () => {
         justifyContent: "center",
       }}
       className="animate__animated animate__fadeIn"
+      {...props}
     >
       <Text
         h1

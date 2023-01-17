@@ -1,17 +1,17 @@
-import { Container, useTheme, Text, Grid } from "@nextui-org/react";
+import { Container, Text } from "@nextui-org/react";
 import { useIntl } from "react-intl";
 import "animate.css";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import RepoCard from "../Card";
 import { ContactContent } from "../../components/Content/ContactContent";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 export const ProjectsContent = ({ data }) => {
   const intl = useIntl();
   const title = intl.formatMessage({ id: "page.projects.title" });
   const desc = intl.formatMessage({ id: "page.projects.desc" });
-  const showMore = intl.formatMessage({ id: "page.home.show-more" });
-  const { type, isDark } = useTheme();
   const [repos, setRepos] = useState([]);
 
   const username = "nahuerodcast";
@@ -27,15 +27,17 @@ export const ProjectsContent = ({ data }) => {
   };
   useEffect(() => {
     fetchRepos();
+    AOS.init();
   }, []);
-
-  console.log(repos);
 
   return (
     <Container
       lg
       css={{ marginTop: "$3xl", minHeight: "100vh" }}
       className={`animate__animated animate__fadeIn`}
+      data-aos="fade-up"
+      data-aos-offset="300"
+      data-aos-duration="1000"
     >
       <Text
         h1
@@ -69,10 +71,20 @@ export const ProjectsContent = ({ data }) => {
         }}
       >
         {repos.map((repo, id) => (
-          <RepoCard repo={repo} key={id} />
+          <RepoCard
+            repo={repo}
+            key={id}
+            data-aos="fade-up"
+            data-aos-offset="300"
+            data-aos-duration="1000"
+          />
         ))}
       </Container>
-      <ContactContent />
+      <ContactContent
+        data-aos="fade-up"
+        data-aos-offset="300"
+        data-aos-duration="1000"
+      />
     </Container>
   );
 };

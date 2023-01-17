@@ -1,15 +1,7 @@
-import {
-  Text,
-  Spacer,
-  Container,
-  Card,
-  Button,
-  useTheme,
-  Grid,
-} from "@nextui-org/react";
+import { Text, Spacer, Container, Card, Button } from "@nextui-org/react";
 import { useIntl } from "react-intl";
 import "animate.css";
-import { useRef, useState } from "react";
+import { useRef, useEffect } from "react";
 import Image from "next/image";
 import reactLogo from "../../public/media/react-logo.png";
 import nextjsLogo from "../../public/media/nextjs-logo.png";
@@ -21,6 +13,8 @@ import tsLogo from "../../public/media/ts-logo.png";
 import jsLogo from "../../public/media/js-logo.png";
 import figmaLogo from "../../public/media/figma-logo.png";
 import { ContactContent } from "../../components/Content/ContactContent";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const stackImgs = [
   { id: 1, name: "React", src: reactLogo },
@@ -38,21 +32,18 @@ export const HomeContent = () => {
   const intl = useIntl();
   const title = intl.formatMessage({ id: "page.home.title" });
   const desc = intl.formatMessage({ id: "page.home.description" });
-  const showMore = intl.formatMessage({ id: "page.home.show-more" });
   const stack = intl.formatMessage({ id: "page.home.stack" });
   const stackDesc = intl.formatMessage({ id: "page.home.stack.desc" });
   const aboutMeTitle = intl.formatMessage({ id: "page.home.about-me.title" });
   const aboutMeDesc = intl.formatMessage({ id: "page.home.about-me.desc" });
   const downloadCV = intl.formatMessage({ id: "page.home.download-cv" });
-  const cv = intl.formatMessage({ id: "page.home.about-me-cv" });
 
-  const { type, isDark } = useTheme();
   const ref = useRef(null);
   const ref2 = useRef(null);
 
-  console.log(ref2.current);
-
-  const [showMoreTransition, setShowMoreTransition] = useState(false);
+  useEffect(() => {
+    AOS.init();
+  }, []);
 
   return (
     <Container
@@ -78,6 +69,9 @@ export const HomeContent = () => {
             width: "100%",
             minHeight: "80vh",
           }}
+          data-aos="fade-up"
+          data-aos-offset="300"
+          data-aos-duration="1000"
         >
           <Container css={{ padding: 0 }}>
             <Text
@@ -153,6 +147,9 @@ export const HomeContent = () => {
             height: "100vh",
           }}
           ref={ref}
+          data-aos="fade-up"
+          data-aos-offset="300"
+          data-aos-duration="1000"
         >
           <Container
             css={{
@@ -212,6 +209,7 @@ export const HomeContent = () => {
                     href={`https://www.google.com.ar/search?q=${stckimg.name}`}
                     target="_blank"
                     key={id}
+                    data-aos="fade"
                   >
                     <Image
                       alt={stckimg.name}
@@ -266,6 +264,9 @@ export const HomeContent = () => {
                   marginBottom: 0,
                   fontSize: "$7xl",
                 }}
+                data-aos="fade-up"
+                data-aos-offset="300"
+                data-aos-duration="1000"
               >
                 {aboutMeTitle}
               </Text>
@@ -281,6 +282,9 @@ export const HomeContent = () => {
               }}
               color="$gray700"
               textAlign="center"
+              data-aos="fade-up"
+              data-aos-offset="300"
+              data-aos-duration="1000"
             >
               {aboutMeDesc}
             </Text>
@@ -288,6 +292,10 @@ export const HomeContent = () => {
             <a
               href="https://drive.google.com/file/d/1wvt6qHhVhnRUw6rJNsoa_jnoF_bGvGRP/view?usp=sharing"
               target={"_blank"}
+              data-aos="fade-up"
+              data-aos-offset="300"
+              data-aos-duration="1000"
+              data-aos-anchor-placement="top-bottom"
             >
               <Button
                 shadow
@@ -303,7 +311,11 @@ export const HomeContent = () => {
             </a>
           </Container>
         </div>
-        <ContactContent />
+        <ContactContent
+          data-aos="fade-up"
+          data-aos-offset="300"
+          data-aos-duration="1000"
+        />
       </Container>
     </Container>
   );
