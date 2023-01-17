@@ -1,15 +1,23 @@
 import { Container, Text, Card, Col, Button, Badge } from "@nextui-org/react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { AiFillGithub } from "react-icons/ai";
 import { HiExternalLink } from "react-icons/hi";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
-const RepoCard = ({ repo }) => {
+const RepoCard = ({ repo, ...props }) => {
   const [successImage, setSuccessImage] = useState(true);
+
+  useEffect(() => {
+    AOS.init();
+  }, []);
+
   return (
     <a
       href={repo.html_url}
       target={"_blank"}
       className={`animate__animated animate__fadeIn card`}
+      {...props}
     >
       <Card css={{ width: "400px", height: "250px" }} isHoverable isPressable>
         <Card.Header

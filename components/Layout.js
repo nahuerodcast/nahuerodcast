@@ -1,17 +1,15 @@
 import { Box } from "./Box.js";
 import {
   Navbar,
-  Button,
-  Text,
   Avatar,
   useTheme,
   Switch,
   Container,
+  Text,
 } from "@nextui-org/react";
 import useDarkMode from "use-dark-mode";
 import { useIntl } from "react-intl";
 import Flag from "react-world-flags";
-import { useState, useRef, useEffect } from "react";
 import { useRouter } from "next/router";
 import { MoonIcon } from "../components/MoonIcon";
 import { SunIcon } from "../components/SunIcon";
@@ -21,11 +19,9 @@ import { AiFillGithub } from "react-icons/ai";
 import Head from "next/head";
 
 export const Layout = ({ children }) => {
-  const [flag, setFlag] = useState(false);
   const darkMode = useDarkMode(false);
-  const { type, isDark } = useTheme();
+  const { isDark } = useTheme();
   const intl = useIntl();
-  const ref = useRef();
 
   const aboutMe = intl.formatMessage({ id: "navbar.about-me" });
   const projects = intl.formatMessage({ id: "navbar.projects" });
