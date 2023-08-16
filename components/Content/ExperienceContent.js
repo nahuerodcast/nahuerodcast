@@ -13,64 +13,62 @@ import { ContactContent } from "../../components/Content/ContactContent";
 
 export const ExperienceContent = () => {
   const { type, isDark } = useTheme();
-  const intl = useIntl();
-  const title = intl.formatMessage({ id: "page.experience.title" });
-  const desc = intl.formatMessage({ id: "page.experience.desc" });
-  const current = intl.formatMessage({ id: "page.experience.current" });
-  const visit = intl.formatMessage({ id: "page.experience.visit" });
+  const { formatMessage } = useIntl();
+  const title = formatMessage({ id: "page.experience.title" });
+  const desc = formatMessage({ id: "page.experience.desc" });
+  const current = formatMessage({ id: "page.experience.current" });
+  const visit = formatMessage({ id: "page.experience.visit" });
 
-  const bekeuTitle = intl.formatMessage({
-    id: "page.experience.company.bekeu.title",
-  });
-  const bekeuDesc = intl.formatMessage({
-    id: "page.experience.company.bekeu.desc",
-  });
-
-  const coderTitle = intl.formatMessage({
-    id: "page.experience.company.coderhouse.title",
-  });
-
-  const coderDesc = intl.formatMessage({
-    id: "page.experience.company.coderhouse.desc",
-  });
-
-  const bmbTitle = intl.formatMessage({
-    id: "page.experience.company.bmb.title",
-  });
-
-  const bmbDesc = intl.formatMessage({
-    id: "page.experience.company.bmb.desc",
-  });
-
-  const arr = [
+  const jobsData = [
     {
-      id: 1,
-      name: "Bekeu",
-      image: "https://www.bekeu.com/wp-content/uploads/2022/05/pruebalogo.png",
-      title: bekeuTitle,
-      tech: "Axios · Redux-Saga · Redux · JavaScript · React.js",
-      desc: bekeuDesc,
+      name: "Mubee",
+      image: "https://mubee.io/assets/img/mubee.png",
+      title: formatMessage({
+        id: "page.experience.company.bekeu.title",
+      }),
+      tech: "GraphQL · Framer motion · Redux Toolkit · styled-components · Redux · React.js · TypeScript",
+      desc: formatMessage({
+        id: "page.experience.company.mubee.desc",
+      }),
       current: true,
-      link: "https://www.bekeu.com/",
-      date: "- MAY 22 -",
+      link: "https://mubee.io",
+      date: "- APR 23 - ",
     },
     {
-      id: 2,
+      name: "Bekeu",
+      image: "https://www.bekeu.com/wp-content/uploads/2022/05/pruebalogo.png",
+      title: formatMessage({
+        id: "page.experience.company.bekeu.title",
+      }),
+      tech: "Axios · Redux-Saga · Redux · JavaScript · React.js",
+      desc: formatMessage({
+        id: "page.experience.company.bekeu.desc",
+      }),
+      link: "https://www.bekeu.com/",
+      date: "- MAY 22 - APR 23 -",
+    },
+    {
       name: "Coderhouse",
       image: "https://jobs.coderhouse.com/assets/logos_coderhouse.png",
-      title: coderTitle,
+      title: formatMessage({
+        id: "page.experience.company.coderhouse.title",
+      }),
       tech: "HTML, CSS, Bootstrap, Grids, SASS, Git, Github.",
-      desc: coderDesc,
+      desc: formatMessage({
+        id: "page.experience.company.coderhouse.desc",
+      }),
       link: "https://www.coderhouse.com/",
       date: "- MAR 21 - MAY 22 -",
     },
     {
-      id: 3,
       name: "Bull Market Brokers",
       image: "https://bullmarketbrokers.com/Content/img/logo-bull.jpg",
-      title: bmbTitle,
-      tech: "",
-      desc: bmbDesc,
+      title: formatMessage({
+        id: "page.experience.company.bmb.title",
+      }),
+      desc: formatMessage({
+        id: "page.experience.company.bmb.desc",
+      }),
       link: "https://www.bullmarketbrokers.com/",
       date: "- FEB 20 - MAY 22 -",
     },
@@ -78,8 +76,7 @@ export const ExperienceContent = () => {
 
   return (
     <Container
-      lg
-      css={{ marginTop: "$2xl" }}
+      css={{ marginTop: "$2xl", padding: 0, maxW: "1200px" }}
       className="animate__animated animate__fadeIn"
     >
       <div
@@ -111,7 +108,7 @@ export const ExperienceContent = () => {
           {desc}
         </Text>
         <Spacer y={2} />
-        {arr.map((item, id) => {
+        {jobsData.map((item, id) => {
           return (
             <>
               <Card
@@ -204,7 +201,7 @@ export const ExperienceContent = () => {
                       h5
                       css={{
                         marginTop: 0,
-                        w: "70%",
+                        w: "100%",
                         lineHeight: "24px",
                         color: "$gray600",
                       }}

@@ -60,7 +60,7 @@ export const Layout = ({ children }) => {
             : pathname.includes("contact") && `- ${contact}`}
         </title>
       </Head>
-      <Navbar variant="sticky" maxWidth={"xl"}>
+      <Navbar variant="sticky">
         <div
           style={{
             width: "100%",
@@ -70,11 +70,12 @@ export const Layout = ({ children }) => {
           }}
         >
           <Container
-            lg
             css={{
               display: "flex",
               flexDirection: "row",
               justifyContent: "space-between",
+              maxWidth: "1200px",
+              padding: 0,
             }}
           >
             <Navbar.Brand>
@@ -172,73 +173,63 @@ export const Layout = ({ children }) => {
       <div className={isDark ? "mainAnimation" : "lightAnimation"}>
         {children}
       </div>
-      <Navbar maxWidth={"lg"}>
-        <Navbar.Brand>
-          <Avatar
-            css={{ marginRight: "12px" }}
-            src="https://portfolio-nahue-rodcast.vercel.app/profile-pic.jpg"
-            size="sm"
-          />
-
-          <Text
-            onClick={handleScrollTo}
-            css={{ marginRight: "4px", cursor: "pointer" }}
-          >
-            {" "}
-            Nahue Rodcast{" "}
-          </Text>
-        </Navbar.Brand>
+      <Navbar>
         <div
           style={{
             display: "flex",
-            flexDirection: "row",
-            alignItems: "center",
             justifyContent: "center",
+            width: "100%",
           }}
         >
-          <a href="https://www.linkedin.com/in/nahuerodcast" target="_blank">
-            <TiSocialLinkedin
-              size="25px"
-              color={`${isDark ? "white" : "black"}`}
-            />
-          </a>
-          <a href="https://www.github.com/nahuerodcast" target="_blank">
-            <AiFillGithub size="25px" color={`${isDark ? "white" : "black"}`} />
-          </a>
-          <a href="https://www.twitter.com/_nahuerod" target="_blank">
-            <TiSocialTwitter
-              size="25px"
-              color={`${isDark ? "white" : "black"}`}
-            />
-          </a>
-        </div>
-        <Navbar.Content
-          hideIn="xs"
-          css={{ letterSpacing: "tighter" }}
-          variant="highlight-rounded"
-        >
-          <div>
-            <Text
-              css={{
-                letterSpacing: "tight",
-                fontWeight: "$semibold",
-              }}
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "space-between",
+              width: "1200px",
+            }}
+          >
+            <Navbar.Brand>
+              <Avatar
+                css={{ marginRight: "12px" }}
+                src="https://portfolio-nahue-rodcast.vercel.app/profile-pic.jpg"
+                size="sm"
+              />
+              <Text
+                onClick={handleScrollTo}
+                css={{ marginRight: "4px", cursor: "pointer" }}
+              >
+                Nahue Rodcast
+              </Text>
+            </Navbar.Brand>
+            <Navbar.Content
+              hideIn="xs"
+              css={{ letterSpacing: "tighter" }}
+              variant="highlight-rounded"
             >
-              {developedBy}
-            </Text>
-            <Text
-              css={{
-                letterSpacing: "tight",
-                lineHeight: "10px",
-                fontWeight: "$normal",
-                textAlign: "right",
-              }}
-              h6
-            >
-              {developedByDesc}
-            </Text>
+              <div>
+                <Text
+                  css={{
+                    letterSpacing: "tight",
+                    fontWeight: "$semibold",
+                  }}
+                >
+                  {developedBy}
+                </Text>
+                <Text
+                  css={{
+                    letterSpacing: "tight",
+                    lineHeight: "10px",
+                    fontWeight: "$normal",
+                    textAlign: "right",
+                  }}
+                  h6
+                >
+                  {developedByDesc}
+                </Text>
+              </div>
+            </Navbar.Content>
           </div>
-        </Navbar.Content>
+        </div>
       </Navbar>
     </Box>
   );

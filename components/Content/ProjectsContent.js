@@ -25,6 +25,7 @@ export const ProjectsContent = ({ data }) => {
       console.log(err);
     }
   };
+
   useEffect(() => {
     fetchRepos();
     AOS.init();
@@ -32,8 +33,12 @@ export const ProjectsContent = ({ data }) => {
 
   return (
     <Container
-      lg
-      css={{ marginTop: "$3xl", minHeight: "100vh" }}
+      css={{
+        marginTop: "$3xl",
+        minHeight: "100vh",
+        maxW: "1200px",
+        padding: 0,
+      }}
       className={`animate__animated animate__fadeIn`}
       data-aos="fade-up"
       data-aos-offset="300"
@@ -60,10 +65,8 @@ export const ProjectsContent = ({ data }) => {
       </Text>
       <Container
         css={{
-          display: "flex",
-          flexDirection: "row",
-          flexWrap: "wrap",
-          justifyContent: "space-between",
+          display: "grid",
+          gridTemplateColumns: "repeat(3,1fr)",
           marginTop: "44px",
           gap: "24px",
           padding: 0,
@@ -80,11 +83,6 @@ export const ProjectsContent = ({ data }) => {
           />
         ))}
       </Container>
-      <ContactContent
-        data-aos="fade-up"
-        data-aos-offset="300"
-        data-aos-duration="1000"
-      />
     </Container>
   );
 };

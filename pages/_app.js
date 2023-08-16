@@ -49,7 +49,6 @@ function MyApp({ Component, pageProps }) {
             rel="shortcut icon"
             href="https://portfolio-nahue-rodcast.vercel.app/favicon.ico"
           />
-
           <meta
             name="viewport"
             content="initial-scale=1.0, width=device-width"

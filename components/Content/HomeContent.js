@@ -53,11 +53,12 @@ export const HomeContent = () => {
       className={`animate__animated animate__fadeIn`}
     >
       <Container
-        lg
         css={{
           display: "flex",
           flexDirection: "row",
           justifyContent: "space-between",
+          maxWidth: "1200px",
+          padding: 0
         }}
       >
         <div
